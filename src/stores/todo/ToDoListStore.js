@@ -1,9 +1,6 @@
-import AbstractReducingStore from '../AbstractReducingStore';
-import StoreField from '../StoreField';
+import { AbstractReducingStore, StoreField } from '@tbiegner99/ui-app-components';
 import ToDoEvents from '../../events/ToDoEvents';
-import ToDoActionCreator from '../../actionCreators/todo/ToDoActionCreator';
-import Utilities from '../../utils/Utilities';
-
+import ToDoActionCreator from '../../actionCreators/ToDoActionCreator';
 class ToDoListStore extends AbstractReducingStore {
   constructor() {
     super();
@@ -18,17 +15,25 @@ class ToDoListStore extends AbstractReducingStore {
     };
   }
 
-  loadLists() {
-    return Utilities.ignoreErrors(ToDoActionCreator.loadLists());
+  async loadLists() {
+    try {
+      return await ToDoActionCreator.loadLists();
+    } catch (err) {
+      return null;
+    }
   }
 
   async loadSelectedListItems() {
-    const selectedList = this.data.selectedList.value;
-    if (!selectedList) {
+    try {
+      const selectedList = this.data.selectedList.value;
+      if (!selectedList) {
+        return null;
+      }
+
+      return await ToDoActionCreator.loadItemsForList(selectedList.listId);
+    } catch (err) {
       return null;
     }
-
-    return Utilities.ignoreErrors(ToDoActionCreator.loadItemsForList(selectedList.listId));
   }
 
   get lists() {

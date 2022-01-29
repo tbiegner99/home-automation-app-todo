@@ -1,0 +1,9 @@
+.listItemsPane {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 15px;
+}
+.lists {
+    width:100%;
+}

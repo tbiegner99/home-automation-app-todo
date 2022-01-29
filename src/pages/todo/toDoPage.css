@@ -1,0 +1,44 @@
+
+.page{
+    display:flex;
+    flex-wrap: wrap;
+    width:100%;
+    height:100%;
+
+}
+.pageContent {
+    position: relative;
+    width:100%;
+    height:calc(100vh - 50px);
+    padding:10px 40px;
+    display:flex;
+    flex-direction: column;
+    overflow:hidden;
+
+}
+.time {
+    margin:0;
+    flex-grow: 0;;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.toDoContent {
+    display: flex;
+    flex-grow: 1;
+    width:100%;
+    height:100%;
+}
+
+.listsPane {
+    width:40%;
+    max-height:100%;
+}
+
+.listItemsPane {
+    width:60%;
+    max-height:100%;
+}
+
+
