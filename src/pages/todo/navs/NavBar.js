@@ -1,14 +1,14 @@
 import React from 'react';
-import { HeaderNavBar, HomeIcon } from '@tbiegner99/home-automation-components';
+import { HeaderNav, HomeIcon } from '@tbiegner99/home-automation-components';
 import Branding from './Branding';
 
 const NavBar = (props) => (
-  <HeaderNavBar>
+  <HeaderNav>
     <div />
 
     <Branding />
     <HomeIcon onClick={props.onHomeClick} />
-  </HeaderNavBar>
+  </HeaderNav>
 );
 
 export default NavBar;

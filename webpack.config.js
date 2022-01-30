@@ -15,7 +15,7 @@ module.exports = {
   devServer: {
     hot: true,
     host: '0.0.0.0',
-    port: 8002,
+    port: 8005,
     headers: {
       'Access-Control-Allow-Origin': '*',
       'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, PATCH, OPTIONS',
