@@ -1,7 +1,6 @@
 import React from 'react';
 
-import { H3 } from '../../../components/elements/Headers';
-import { AddIcon } from '../../../components/icons/Icons';
+import { H3, AddIcon } from '@tbiegner99/home-automation-components';
 
 import styles from './listPaneHeader.css';
 

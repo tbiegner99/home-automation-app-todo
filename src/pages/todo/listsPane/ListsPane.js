@@ -1,13 +1,14 @@
 import React from 'react';
-
 import combineClasses from 'classnames';
-import List from '../../../components/elements/list/List';
-import ListItem from '../../../components/elements/list/ListItem';
-import styles from './listsPane.css';
+import {
+  List,
+  ListItem,
+  PlaceHolderListItem as ListItemPlaceHolder,
+  ConfirmDialog
+} from '@tbiegner99/home-automation-components';
 import ListPaneHeader from '../listPaneHeader/ListPaneHeader';
 import AddListModal from './addModal/AddListModal';
-import ConfirmDialog from '../../../components/dialogs/ConfirmDialog';
-import ListItemPlaceHolder from '../../../components/elements/list/PlaceHolderListItem';
+import styles from './listsPane.css';
 
 class ListsPane extends React.Component {
   constructor(props) {

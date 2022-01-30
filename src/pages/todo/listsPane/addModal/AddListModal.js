@@ -1,11 +1,14 @@
 import React from 'react';
 import combineClasses from 'classnames';
-import Form from 'reactforms/src/form/Form';
-import Button from 'reactforms/src/form/elements/Button';
-import Modal from '../../../../components/elements/modal/Modal';
-import { H2 } from '../../../../components/elements/Headers';
-import TextInput from '../../../../components/inputs/TextInput';
-import TextArea from '../../../../components/inputs/TextArea';
+
+import {
+  H2,
+  TextArea,
+  TextInput,
+  Modal,
+  Form,
+  Button
+} from '@tbiegner99/home-automation-components';
 
 import styles from './addListModal.css';
 

@@ -1,7 +1,7 @@
 import { BaseActionCreator } from '@tbiegner99/ui-app-components';
 
 import ToDoListDatasource from '../datasource/ToDoListDatasource';
-import ToDoEvents from '../../events/ToDoEvents';
+import ToDoEvents from '../events/ToDoEvents';
 
 class ToDoActionCreator extends BaseActionCreator {
   async createList(list) {

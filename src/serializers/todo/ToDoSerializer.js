@@ -1,4 +1,4 @@
-import moment from 'moment';
+import dayjs from 'dayjs';
 
 class ToDoListSerializer {
   fromListResponse(list) {
@@ -6,7 +6,7 @@ class ToDoListSerializer {
       listId: list.listId,
       name: list.name,
       description: list.description,
-      created: moment(list.created)
+      created: dayjs(list.created)
     };
   }
 

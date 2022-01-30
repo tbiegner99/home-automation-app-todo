@@ -1,14 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { H3, CurrentTime } from '@tbiegner99/home-automation-components';
 import Urls from '../../utils/Urls';
 import NavBar from './navs/NavBar';
-import CurrentTime from '../../components/elements/CurrentTime';
-import styles from './toDoPage.css';
-import { H3 } from '../../components/elements/Headers';
-import ToDoActionCreator from '../../actionCreators/todo/ToDoActionCreator';
-
+import ToDoActionCreator from '../../actionCreators/ToDoActionCreator';
 import ListsPane from './listsPane/ListsPane';
 import ListItemsPane from './listItemsPane/ListItemsPane';
+import styles from './toDoPage.css';
 
 const ToDoPage = (props) => {
   const {

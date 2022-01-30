@@ -1,7 +1,6 @@
 import React from 'react';
-import { HeaderNavBar } from '../../../components/menus/HeaderNav';
+import { HeaderNavBar, HomeIcon } from '@tbiegner99/home-automation-components';
 import Branding from './Branding';
-import { HomeIcon } from '../../../components/icons/Icons';
 
 const NavBar = (props) => (
   <HeaderNavBar>
