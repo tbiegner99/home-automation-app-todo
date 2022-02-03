@@ -1,8 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { H3, CurrentTime } from '@tbiegner99/home-automation-components';
-import Urls from '../../utils/Urls';
-import NavBar from './navs/NavBar';
 import ToDoActionCreator from '../../actionCreators/ToDoActionCreator';
 import ListsPane from './listsPane/ListsPane';
 import ListItemsPane from './listItemsPane/ListItemsPane';
@@ -10,7 +8,6 @@ import styles from './toDoPage.css';
 
 const ToDoPage = (props) => {
   const {
-    onChangeUrl,
     onCreateList,
     onCreateListItem,
     onDeleteItem,
@@ -22,7 +19,6 @@ const ToDoPage = (props) => {
   } = props;
   return (
     <div className={styles.page}>
-      <NavBar onHomeClick={() => onChangeUrl(Urls.HOME)} />
       <div className={styles.pageContent}>
         <H3 className={styles.time}>
           <CurrentTime format="dddd MMMM D YYYY" />
@@ -79,7 +75,4 @@ const mapDispatchToProps = () => ({
   }
 });
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(ToDoPage);
+export default connect(mapStateToProps, mapDispatchToProps)(ToDoPage);
